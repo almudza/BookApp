@@ -9,15 +9,15 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header />
+        {/* <Header /> */}
 
-        <BooksSection />
+        {/* <BooksSection /> */}
 
-        <BookDetail />
+        {/* <BookDetail /> */}
 
         <PageNotFound />
 
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
   }
