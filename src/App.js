@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Header from './component/header/header';
 import Footer from './component/footer/footer';
 import BooksSection from './pages/books-section';
@@ -8,17 +9,18 @@ import PageNotFound from './pages/page-not-found';
 class App extends Component {
   render() {
     return (
-      <div>
-        {/* <Header /> */}
-
-        {/* <BooksSection /> */}
-
-        {/* <BookDetail /> */}
-
-        <PageNotFound />
-
-        {/* <Footer /> */}
-      </div>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact component={BooksSection} />
+          <Route
+            path="/books/category/:categoryName"
+            exact
+            component={BooksSection}
+          />
+          <Route path="/book/:bookID" component={BookDetail} />
+          <Route component={PageNotFound} />
+        </Switch>
+      </BrowserRouter>
     );
   }
 }
