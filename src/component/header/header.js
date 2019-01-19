@@ -1,25 +1,26 @@
 import React from 'react';
+import { NavLink, Link } from 'react-router-dom';
 
 let Header = props => {
   return (
     <header id="header">
       <div className="container">
         <nav>
-          <a className="logo" href="#">
-            <i className="fas fa-book-open" />{' '}
-          </a>
+          <Link className="logo" to="/">
+            <i className="fas fa-book-open" />
+          </Link>
           <ul className="categories">
-            <li className="active">
-              <a href="#">HTML</a>
+            <li>
+              <NavLink to="/books/category/HTML">HTML</NavLink>
             </li>
             <li>
-              <a href="#">JavaScript</a>
+              <NavLink to="/books/category/CSS">CSS</NavLink>
             </li>
             <li>
-              <a href="#">React</a>
+              <NavLink to="/books/category/JavaScript">JavaScript</NavLink>
             </li>
             <li>
-              <a href="#">Node.JS</a>
+              <NavLink to="/books/category/NodeJS">NodeJS</NavLink>
             </li>
           </ul>
         </nav>

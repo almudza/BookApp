@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../component/header/header';
 import Footer from '../component/footer/footer';
 
-let BookDetail = props => {
+let BookDetailPage = props => {
   return (
     <div className="has-fixed-footer">
       <Header />
@@ -44,4 +44,4 @@ let BookDetail = props => {
   );
 };
 
-export default BookDetail;
+export default BookDetailPage;
